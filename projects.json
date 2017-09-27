@@ -1,0 +1,34 @@
+{ "projects": [{
+      "name": "Banking App",
+      "description": "description goes here",
+      "owner": "Mike",
+      "projectMoney": "30000",
+      "timeSpan": "60",
+      "contributors": [
+        {"firstName": "Kim", "lastName": "Smith", "email": "kim@gmail.com", "cardType": "visa", "cardNumber": "1111-2222-3333-4444", "contribution": "10"
+        }
+      ]
+    },
+    {
+      "name": "Battle Squares App",
+      "description": "description goes here",
+      "owner": "Charlie",
+      "projectMoney": "30000",
+      "timeSpan": "60",
+      "contributors": [
+        {"firstName": "Mike", "lastName": "Tyson", "email": "mike@gmail.com", "cardType": "visa", "cardNumber": "1111-2222-3333-4444", "contribution": "10"
+        }
+      ]
+    },
+    {
+      "name": "Consignment Shop",
+      "description": "description goes here",
+      "owner": "Ben",
+      "projectMoney": "45000",
+      "timeSpan": "60",
+      "contributors": [
+        {"firstName": "Jesse", "lastName": "Johns", "email": "jessy@gmail.com", "cardType": "visa", "cardNumber": "1111-2222-3333-4444", "contribution": "10"
+        }
+      ]
+  }]
+}

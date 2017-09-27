@@ -1,3 +1,21 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">FUND-A-DEV</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="about">About Us</a></li>
+      <li><a routerLink="projects">Projects</a></li>
+      <li><a routerLink="developers">Developers</a></li>
+      <li><a routerLink="supporters">Supporters</a></li>
+      <li><a routerLink="startdev">Start-A-DEV</a></li>
+      <li><a routerLink="admin">Admin</a></li>
+      <li><a routerLink="fadapi">Our API</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>{{title}}</h1>
+  <router-outlet></router-outlet>
+</div>

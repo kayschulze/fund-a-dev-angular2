@@ -4,6 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AboutComponent } from './about/about.component';
 import { ProjectListComponent } from './project-list/project-list.component';
+import { AddProjectComponent } from './add-project/add-project.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { ContributorComponent } from './contributor/contributor.component';
 
 const appRoutes: Routes = [
   {
@@ -13,6 +16,18 @@ const appRoutes: Routes = [
   {
     path: 'projects',
     component: ProjectListComponent
+  },
+  {
+    path: 'start-a-dev',
+    component: AddProjectComponent
+  },
+  {
+    path: 'projects/:id',
+    component: ProjectDetailsComponent
+  },
+  {
+    path: 'contributor/:id',
+    component: ContributorComponent
   }
 
 ];

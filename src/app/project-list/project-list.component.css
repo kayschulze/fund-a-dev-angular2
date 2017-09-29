@@ -1,0 +1,22 @@
+.panel:hover{
+  transform: scale(1.01);
+  background-color: snow;
+}
+#projectListImg{
+  height: 250px;
+  width: 250px;
+
+}
+
+#myBar {
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+#goal {
+  font-size: 20px;
+  font-weight: 10px;
+}

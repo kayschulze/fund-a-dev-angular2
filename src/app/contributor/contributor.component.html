@@ -1,0 +1,46 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Become a Contributor!!!</h2>
+  </div>
+
+  <div class="panel-body">
+    <div>
+      <label>First Name: </label>
+      <input class="form-control" #firstName>
+    </div>
+
+    <div>
+      <label>Last Name: </label>
+      <input class="form-control" #lastName>
+    </div>
+
+    <div>
+      <label>Email: </label>
+      <input class="form-control" #email>
+    </div>
+
+    <div>
+      <label>Credit Card Number: </label>
+      <input class="form-control" #creditCardNumber>
+    </div>
+
+    <div>
+      <label>Credit Card Type: </label>
+      <select class="form-control" #creditCardType>
+        <option value="visa">Visa</option>
+        <option value="masterCard">MasterCard</option>
+        <option value="americanExpress">American Express</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Contribution Amount: </label>
+      <input class="form-control"  #contribution>
+      <br>
+    </div>
+
+    <div>
+      <button class="btn btn-primary" (click)="beginDonating(firstName.value, lastName.value, email.value, creditCardNumber.value, creditCardType.value, contribution.value); firstName.value=''; lastName.value=''; email.value=''; creditCardNumber.value=''; contribution.value=''; creditCardType.value='';">Donate</button>
+    </div>
+  </div>
+</div>

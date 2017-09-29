@@ -1,3 +1,18 @@
-<div class="panel" *ngFor="let project of projects | async">
-  <h3>{{project.name}}</h3>
+<div class="card-group">
+  <div class="card" class="card-deck" *ngFor="let project of projects | async">
+    <div class="card-block panel panel-default">
+      <img id="projectListImg" class="card-img-top" src="./../assets/images/placeholder.png">
+    <h3 (click)="goToDetails(project)">{{project.name}}..</h3>
+    <p class="card-text">{{project.description}}</p>
+      <h3>${{ project.fundRaised | number:'1.0-0'}} <span id="goal">of  ${{project.projectMoney | number:'1.0-0'}} Goal</span></h3>
+    <div class="myProgress" [ngStyle]="{'width': '300px', 'background-color': '#bbe6a9'}">
+      <div id="myBar" [style.width.%]="(project.fundRaised/project.projectMoney)*100">{{(project.fundRaised/project.projectMoney)*100 | number: '1.0-0'}}%</div>
+    </div>
+    <p class="card-text"><small class="text-muted">Days left</small></p>
+
+    <app-contributor [selectedProject] = "project"></app-contributor>
+
+    <button (click)="goToContributor(project)">Back It!!</button>
+    </div>
+  </div>
 </div>

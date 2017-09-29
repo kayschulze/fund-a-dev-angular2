@@ -1,3 +1,16 @@
-<p>
-  project-details works!
-</p>
+<div class="well">
+
+  <div class="panel-body">
+
+    <h3>{{(projectToDisplay | async).name}} </h3>
+
+    <p>{{(projectToDisplay | async).description}}</p>
+    <p>Owner: {{(projectToDisplay | async).owner}}</p>
+    <p>Funds Goal: {{(projectToDisplay | async).projectMoney | number: '1.0-0'}}</p>
+    <p>Funds Raised: {{(projectToDisplay | async).fundRaised | number: '1.0-0'}}</p>
+    <p>Time Span: {{(projectToDisplay | async).timeSpan}} days</p>
+    <h4>Join these contributors . . .</h4>
+    <ul><li *ngFor="let contributor of (projectToDisplay | async).contributors"> {{contributor.firstName}} {{contributor.lastName}}</li></ul>
+
+  </div>
+</div>

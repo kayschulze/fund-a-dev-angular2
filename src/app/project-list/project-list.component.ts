@@ -20,5 +20,12 @@ export class ProjectListComponent implements OnInit {
     this.projects = this.fundService.getProjects();
 
   }
+  goToDetails(clickedProject) {
+    this.router.navigate(['projects', clickedProject.$key]);
+  }
+
+  goToContributor(clickedProject) {
+    this.router.navigate(['contributor', clickedProject.$key]);
+  }
 
 }

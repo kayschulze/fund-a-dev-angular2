@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-
+import { ActivatedRoute, Params } from '@angular/router';
 import { FundADevService } from '../fund-adev.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
@@ -15,12 +15,19 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class ProjectDetailsComponent
  implements OnInit {
 
-  // projectToDisplay: FirebaseObjectObservable<any>;
-  //
-  // constructor(private router: Router, private location: Location,
-  // private fundService ) { }
-  //
+  projectId: string;
+  projectToDisplay: FirebaseObjectObservable<any>;
+
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private fundService: FundADevService ) { }
+
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.projectId = urlParameters['id'];
+    });
+    this.projectToDisplay = this.fundService.getProjectById(this.projectId);
   }
 
 }
